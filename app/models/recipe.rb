@@ -7,6 +7,7 @@
 #  servings   :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  menu_id    :integer
 #
 
 class Recipe < ApplicationRecord
