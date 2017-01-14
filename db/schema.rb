@@ -10,6 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20170114080916) do
+
+  create_table "dishes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.float    "calorie",     limit: 24
+    t.float    "ash",         limit: 24
+    t.float    "cholesterol", limit: 24
+    t.float    "protein",     limit: 24
+    t.float    "water",       limit: 24
+    t.float    "fiber",       limit: 24
+    t.float    "fat",         limit: 24
+    t.float    "carb",        limit: 24
+    t.integer  "step_id"
+    t.string   "option"
+    t.boolean  "leather"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "recipes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.float    "time",       limit: 24
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
 
 end
