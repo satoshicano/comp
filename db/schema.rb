@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170114122540) do
+ActiveRecord::Schema.define(version: 20170114141242) do
 
   create_table "dishes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
@@ -23,18 +23,29 @@ ActiveRecord::Schema.define(version: 20170114122540) do
     t.float    "gram",       limit: 24
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
+    t.integer  "food_id"
+    t.integer  "recipe_id"
+    t.index ["food_id"], name: "index_food_recipes_on_food_id", using: :btree
+    t.index ["recipe_id"], name: "index_food_recipes_on_recipe_id", using: :btree
   end
 
   create_table "food_step_recipes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "food_step_id"
     t.integer  "recipi_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "food_steps_id"
+    t.integer  "recipes_id"
+    t.index ["food_steps_id"], name: "index_food_step_recipes_on_food_steps_id", using: :btree
+    t.index ["recipes_id"], name: "index_food_step_recipes_on_recipes_id", using: :btree
   end
 
   create_table "food_steps", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "steps_id"
+    t.integer  "foods_id"
+    t.index ["foods_id"], name: "index_food_steps_on_foods_id", using: :btree
+    t.index ["steps_id"], name: "index_food_steps_on_steps_id", using: :btree
   end
 
   create_table "foods", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -64,10 +75,12 @@ ActiveRecord::Schema.define(version: 20170114122540) do
   create_table "recipes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.integer  "servings"
-    t.integer  "menu_id"
-    t.integer  "dish_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "menus_id"
+    t.integer  "dishes_id"
+    t.index ["dishes_id"], name: "index_recipes_on_dishes_id", using: :btree
+    t.index ["menus_id"], name: "index_recipes_on_menus_id", using: :btree
   end
 
   create_table "steps", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
