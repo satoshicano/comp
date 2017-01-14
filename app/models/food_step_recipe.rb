@@ -4,9 +4,14 @@
 #
 #  id           :integer          not null, primary key
 #  food_step_id :integer
-#  recipi_id    :integer
+#  recipe_id    :integer
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#
+# Indexes
+#
+#  fk_rails_461a73235a  (food_step_id)
+#  fk_rails_cc9d162585  (recipe_id)
 #
 
 class FoodStepRecipe < ApplicationRecord
