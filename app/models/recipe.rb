@@ -5,10 +5,10 @@
 #  id         :integer          not null, primary key
 #  title      :string(255)
 #  servings   :integer
+#  menu_id    :integer
 #  dish_id    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  menu_id    :integer
 #
 
 class Recipe < ApplicationRecord
