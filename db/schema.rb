@@ -74,8 +74,8 @@ ActiveRecord::Schema.define(version: 20170114131404) do
   create_table "recipes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.integer  "servings"
-    t.integer  "menu_id"
     t.integer  "dish_id"
+    t.integer  "menu_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["dish_id"], name: "fk_rails_9c43157b6c", using: :btree
