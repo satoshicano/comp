@@ -1,13 +1,13 @@
 # == Schema Information
 #
-# Table name: recipes
+# Table name: steps
 #
 #  id         :integer          not null, primary key
-#  title      :string(255)
-#  servings   :integer
+#  name       :string(255)
+#  time       :float(24)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Recipe < ApplicationRecord
+class Step < ApplicationRecord
 end
