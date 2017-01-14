@@ -12,7 +12,7 @@
 #  fiber       :float(24)
 #  fat         :float(24)
 #  carb        :float(24)
-#  step_id     :integer
+#  recipe_id   :integer
 #  option      :string(255)
 #  leather     :boolean
 #  created_at  :datetime         not null
