@@ -10,4 +10,6 @@
 #
 
 class Step < ApplicationRecord
+  has_many :food_steps
+  has_many :steps, through: :food_steps
 end

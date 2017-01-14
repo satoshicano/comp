@@ -8,4 +8,8 @@
 #
 
 class FoodStep < ApplicationRecord
+  belongs_to :food
+  belongs_to :step
+  has_many :food_step_recipes
+  has_many :recipes, through: :food_step_recipes
 end
