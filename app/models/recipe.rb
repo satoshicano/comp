@@ -10,11 +10,6 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-# Indexes
-#
-#  fk_rails_52f5da1b31  (menu_id)
-#  fk_rails_9c43157b6c  (dish_id)
-#
 
 class Recipe < ApplicationRecord
   has_many :food_recipes
