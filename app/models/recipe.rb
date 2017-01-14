@@ -18,7 +18,7 @@
 
 class Recipe < ApplicationRecord
   has_many :food_recipes
-  has_many :food, through: :food_recipes
+  has_many :foods, through: :food_recipes
   has_many :food_step_recipes
   has_many :food_steps, through: :food_step_recipes
   belongs_to :dish
