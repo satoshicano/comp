@@ -2229,7 +2229,7 @@ FoodRecipe.create!([
   {"recipe_id": 2, "food_id": 2191, "number": 2},
 ])
 
-FoodStep.crete!([
+FoodStep.create!([
   {"id": 0, "food_id": 611, "step_id": 2},  # curry
   {"id": 1, "food_id": 190, "step_id": 2},
   {"id": 2, "food_id": 1602, "step_id": 2},
