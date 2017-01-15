@@ -2212,7 +2212,7 @@ Food.create!([
 FoodRecipe.create!([
   {"recipe_id": 0, "food_id": 611, "number": 1},
   {"recipe_id": 0, "food_id": 190, "number": 3},
-  {"recipe_id": 0, "food_id": 1602, "number": 300},
+  {"recipe_id": 0, "food_id": 1602, "number": 1},
   {"recipe_id": 0, "food_id": 2130, "number": 1},
   {"recipe_id": 1, "food_id": 730, "number": 0.5},
   {"recipe_id": 1, "food_id": 575, "number": 2},
@@ -2221,11 +2221,11 @@ FoodRecipe.create!([
   {"recipe_id": 1, "food_id": 574, "number": 2},
   {"recipe_id": 1, "food_id": 670, "number": 2},
   {"recipe_id": 2, "food_id": 639, "number": 0.5},
-  {"recipe_id": 2, "food_id": 1694, "number": 300},
-  {"recipe_id": 2, "food_id": 289, "number": 300},
-  {"recipe_id": 2, "food_id": 167, "number": 100},
+  {"recipe_id": 2, "food_id": 1694, "number": 1},
+  {"recipe_id": 2, "food_id": 289, "number": 1},
+  {"recipe_id": 2, "food_id": 167, "number": 1},
   {"recipe_id": 2, "food_id": 629, "number": 0.5},
-  {"recipe_id": 2, "food_id": 920, "number": 100},
+  {"recipe_id": 2, "food_id": 920, "number": 1},
   {"recipe_id": 2, "food_id": 2191, "number": 2},
 ])
 
