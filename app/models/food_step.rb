@@ -7,6 +7,7 @@
 #  updated_at :datetime         not null
 #  step_id    :integer
 #  food_id    :integer
+#  order      :integer
 #
 # Indexes
 #
