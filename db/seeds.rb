@@ -2230,7 +2230,7 @@ FoodRecipe.create!([
 ])
 
 FoodStep.create!([
-  {"id": 0, "food_id": 611, "step_id": 2},
+  {"id": 0, "food_id": 611, "step_id": 2},  # curry
   {"id": 1, "food_id": 190, "step_id": 2},
   {"id": 2, "food_id": 1602, "step_id": 2},
   {"id": 3, "food_id": 1602, "step_id": 3},
@@ -2238,4 +2238,47 @@ FoodStep.create!([
   {"id": 5, "food_id": 190, "step_id": 5},
   {"id": 6, "food_id": 1602, "step_id": 5},
   {"id": 7, "food_id": 2130, "step_id": 5},
+  {"id": 8, "food_id": 730, "step_id": 2},  # salada
+  {"id": 9, "food_id": 575, "step_id": 2},
+  {"id": 10, "food_id": 455, "step_id": 2},
+  {"id": 11, "food_id": 752, "step_id": 2},
+  {"id": 12, "food_id": 574, "step_id": 2},
+  {"id": 13, "food_id": 670, "step_id": 2},
+  {"id": 14, "food_id": 670, "step_id": 5},
+  {"id": 15, "food_id": 2109, "step_id": 7},
+  {"id": 16, "food_id": 639, "step_id": 2},  # nabe
+  {"id": 17, "food_id": 1694, "step_id": 2},
+  {"id": 18, "food_id": 289, "step_id": 2},
+  {"id": 19, "food_id": 167, "step_id": 2},
+  {"id": 20, "food_id": 629, "step_id": 2},
+  {"id": 21, "food_id": 920, "step_id": 2},
+  {"id": 22, "food_id": 920, "step_id": 2},
+  {"id": 23, "food_id": 2191, "step_id": 5},
+])
+
+FoodStepRecipe.create!([
+  {"id": 0, "food_step_id": 0, "recipe_id": 0},
+  {"id": 1, "food_step_id": 1, "recipe_id": 0},
+  {"id": 2, "food_step_id": 2, "recipe_id": 0},
+  {"id": 3, "food_step_id": 3, "recipe_id": 0},
+  {"id": 4, "food_step_id": 4, "recipe_id": 0},
+  {"id": 5, "food_step_id": 5, "recipe_id": 0},
+  {"id": 6, "food_step_id": 6, "recipe_id": 0},
+  {"id": 7, "food_step_id": 7, "recipe_id": 0},
+  {"id": 8, "food_step_id": 8, "recipe_id": 1},
+  {"id": 9, "food_step_id": 9, "recipe_id": 1},
+  {"id": 10, "food_step_id": 10, "recipe_id": 1},
+  {"id": 11, "food_step_id": 11, "recipe_id": 1},
+  {"id": 12, "food_step_id": 12, "recipe_id": 1},
+  {"id": 13, "food_step_id": 13, "recipe_id": 1},
+  {"id": 14, "food_step_id": 14, "recipe_id": 1},
+  {"id": 15, "food_step_id": 15, "recipe_id": 1},
+  {"id": 16, "food_step_id": 16, "recipe_id": 2},
+  {"id": 17, "food_step_id": 17, "recipe_id": 2},
+  {"id": 18, "food_step_id": 18, "recipe_id": 2},
+  {"id": 19, "food_step_id": 19, "recipe_id": 2},
+  {"id": 20, "food_step_id": 20, "recipe_id": 2},
+  {"id": 21, "food_step_id": 21, "recipe_id": 2},
+  {"id": 22, "food_step_id": 22, "recipe_id": 2},
+  {"id": 23, "food_step_id": 23, "recipe_id": 2},
 ])
