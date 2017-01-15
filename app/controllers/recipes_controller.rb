@@ -3,7 +3,32 @@ class RecipesController < ApplicationController
 
   # GET /recipes
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.all.map do |r|
+      foods = r.foods.map do |f|
+        {
+          id: f.id,
+          title: f.name,
+          option: f.option,
+          leather: f.leather,
+          price: f.cost,
+          num: FoodRecipe.includes(:recipe).find_by({food_id: f.id, recipe_id: r.id }).number,
+          nutrients: {
+            calorie: f.calorie,
+            ash: f.ash,
+            cholesterol: f.cholesterol,
+            protein: f.protein,
+            water: f.water,
+            fiber: f.fiber,
+            carb: f.carb
+          }
+        }
+      end
+
+      steps = r.food_steps.joins(:step, :food).includes(:step, :food).group_by {|fs| fs.step.name}.map do |name, fss| {
+        title: name, foods: fss.map{|fs| fs.food.name}, time: fss.first.step.time }
+      end
+      {title: r.title, servings: r.servings, foods: foods, steps: steps}
+    end
 
     render json: @recipes
   end
