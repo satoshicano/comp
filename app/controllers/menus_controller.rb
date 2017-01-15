@@ -10,7 +10,7 @@ class MenusController < ApplicationController
 
   # GET /menus/1
   def show
-    render json: @menu
+    render json: @menu.recipes
   end
 
   # POST /menus
