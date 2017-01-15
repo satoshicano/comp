@@ -19,7 +19,8 @@ class RecipesController < ApplicationController
             protein: f.protein,
             water: f.water,
             fiber: f.fiber,
-            carb: f.carb
+            carb: f.carb,
+            fat: f.fat
           }
         }
       end
